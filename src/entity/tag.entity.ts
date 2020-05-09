@@ -5,11 +5,11 @@ import { BaseEntity } from './base.entity'
 @Unique(['slug'])
 export class Tag extends BaseEntity {
   @Column({ type: 'varchar', length: 64 })
-  slug: string
+  slug!: string
 
   @Column({ type: 'varchar', length: 64 })
-  name: string
+  name!: string
 
   @Column({ type: 'text', nullable: true })
-  content: string
+  content?: string
 }

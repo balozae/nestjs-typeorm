@@ -25,7 +25,7 @@ class ConfigService {
 
   public isProduction() {
     const mode = this.getValue('MODE', false)
-    return mode != 'DEV'
+    return mode !== 'DEV'
   }
 
   public getTypeOrmConfig(): TypeOrmModuleOptions {
@@ -47,8 +47,6 @@ class ConfigService {
       cli: {
         migrationsDir: 'src/migration',
       },
-
-      // ssl: this.isProduction(),
     }
   }
 }
